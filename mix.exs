@@ -23,7 +23,8 @@ defmodule LumenityChallenge.Mixfile do
         :logger,
         :runtime_tools,
         :nimble_csv,
-        :timex
+        :timex,
+        :exprotobuf
       ]
     ]
   end
@@ -44,6 +45,7 @@ defmodule LumenityChallenge.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:nimble_csv, "~> 0.3"},
+      {:exprotobuf, "~> 1.2.9"},
       {:timex, "~> 3.1"}
     ]
   end

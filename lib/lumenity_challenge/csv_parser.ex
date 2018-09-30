@@ -22,7 +22,6 @@ defmodule LumenityChallenge.CSV do
     |> File.stream!
     |> CSVParser.parse_stream
     |> Stream.map(fn [id, division, season, date, home_team, away_team, fthg, ftag, ftr, hthg, htag, htr] ->
-      # Define a struct
       %{
        id: id,
        division: division,

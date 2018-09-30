@@ -1,0 +1,6 @@
+syntax = "proto3";
+import "match.proto";
+
+message MatchCollection {
+  repeated Match records = 1;
+}
