@@ -40,6 +40,8 @@ config :lumenity_challenge, LumenityChallengeWeb.Endpoint,
     ]
   ]
 
+config :lumenity_challenge, :csv_filepath, "priv/data.csv"
+
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 

@@ -12,7 +12,9 @@ defmodule LumenityChallenge.Application do
       supervisor(LumenityChallengeWeb.Endpoint, []),
       # Start your own worker by calling: LumenityChallenge.Worker.start_link(arg1, arg2, arg3)
       # worker(LumenityChallenge.Worker, [arg1, arg2, arg3]),
-      worker(LumenityChallenge.LeagueSeasonService, ["./data.csv"])
+      worker(LumenityChallenge.LeagueSeasonService, [
+        Application.get_env(:lumenity_challenge, :csv_filepath)
+      ])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

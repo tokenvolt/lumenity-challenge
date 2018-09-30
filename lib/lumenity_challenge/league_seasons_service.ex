@@ -19,10 +19,10 @@ defmodule LumenityChallenge.LeagueSeasonService do
   # Server
 
   @impl true
-  def init(_) do
+  def init(filepath) do
     {
       :ok,
-      CSV.import("./data.csv")
+      CSV.import(filepath)
       |> Enum.group_by(fn(a) -> {Map.get(a, :division), Map.get(a, :season)} end)
     }
   end

@@ -8,3 +8,5 @@ config :lumenity_challenge, LumenityChallengeWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :lumenity_challenge, :csv_filepath, "test/fixtures/data.csv"
