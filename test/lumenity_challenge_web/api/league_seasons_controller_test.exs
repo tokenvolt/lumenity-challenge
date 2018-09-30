@@ -5,7 +5,7 @@ defmodule LumenityChallengeWeb.API.LeagueSeasonsControllerTest do
   test "json", %{conn: conn} do
     resp = conn |> get(league_seasons_path(conn, :show, "SP1", "201516", %{
       "_format" => "json"
-    }))
+    })) |> doc
 
     assert data = json_response(resp, 200)
     assert data == [

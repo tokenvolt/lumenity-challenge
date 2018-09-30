@@ -46,6 +46,7 @@ defmodule LumenityChallenge.Mixfile do
       {:cowboy, "~> 1.0"},
       {:nimble_csv, "~> 0.3"},
       {:exprotobuf, "~> 1.2.9"},
+      {:bureaucrat, "~> 0.2.4"},
       {:timex, "~> 3.1"}
     ]
   end

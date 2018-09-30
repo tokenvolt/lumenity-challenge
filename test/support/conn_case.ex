@@ -20,12 +20,12 @@ defmodule LumenityChallengeWeb.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
       import LumenityChallengeWeb.Router.Helpers
+      import Bureaucrat.Helpers
 
       # The default endpoint for testing
       @endpoint LumenityChallengeWeb.Endpoint
     end
   end
-
 
   setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
