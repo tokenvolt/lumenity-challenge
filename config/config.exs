@@ -5,11 +5,16 @@
 # is restricted to this project.
 use Mix.Config
 
+port = String.to_integer(System.get_env("PORT") || "8080")
+
+IO.inspect(System.get_env("PORT"))
+
 # Configures the endpoint
 config :lumenity_challenge, LumenityChallengeWeb.Endpoint,
-  url: [host: "localhost"],
-  secret_key_base: "475K+e7ER7wut1yP17KaiCZ8g8yCg05Wr6SFCweWAQ5qgqF78SA+jPKOXOZAQtj0",
-  render_errors: [view: LumenityChallengeWeb.ErrorView, accepts: ~w(html json)],
+  http: [port: port],
+  url: [host: System.get_env("HOSTNAME"), port: port],
+  root: ".",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   pubsub: [name: LumenityChallenge.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
